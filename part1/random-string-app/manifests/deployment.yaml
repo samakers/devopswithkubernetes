@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: randomstringapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: randomstringapp
+  template:
+    metadata:
+      labels:
+        app: randomstringapp
+    spec:
+      containers:
+        - name: randomstringapp
+          image: samakers1380/randomstringapp:latest
